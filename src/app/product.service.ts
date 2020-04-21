@@ -11,34 +11,34 @@ itemData;
 
   postProduct(data):Observable<any>{
 
-  return  this.http.post('http://localhost:3000/create',data)
+  return  this.http.post('https://nodejs-productcatalog.herokuapp.com/create',data)
 
   }
 
   listProduct():Observable <any>{
-    return  this.http.get('http://localhost:3000/listproducts')
+    return  this.http.get('https://nodejs-productcatalog.herokuapp.com/listproducts')
 
   }
 
   editProduct(data):Observable<any>{
    
-    return this.http.put('http://localhost:3000/edit/'+ data.productId,data);
+    return this.http.put('https://nodejs-productcatalog.herokuapp.com/edit/'+ data.productId,data);
   }
 
   deleteProduct(data):Observable<any>
   {
    
-    return this.http.delete('http://localhost:3000/deleteproduct/'+data)
+    return this.http.delete('https://nodejs-productcatalog.herokuapp.com/deleteproduct/'+data)
   }
 
   viewCategory(data):Observable<any>
   {
-    return this.http.get('http://localhost:3000/category/'+data)
+    return this.http.get('https://nodejs-productcatalog.herokuapp.com/category/'+data)
   }
 
   editQuantity(data):Observable<any>
   {
-    return this.http.put('http://localhost:3000/editquantity/'+data.productId,data)
+    return this.http.put('https://nodejs-productcatalog.herokuapp.com/editquantity/'+data.productId,data)
   }
 
   viewItems()
