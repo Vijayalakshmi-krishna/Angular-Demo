@@ -1,0 +1,44 @@
+<div class="container">
+    <form [formGroup]="editForm" (submit)="editData()">
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="ProdId">Enter a ProductId:</label>
+                <input type="text" class="form-control" formControlName="productId">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <hr>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <label for="ProdId">Fields to Edit</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="price">Enter Price:</label>
+                <input type="text" class="form-control" formControlName="price">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="price">Enter Quantity:</label>
+                <input type="number" class="form-control" formControlName="quantity" min=0>
+                <span *ngIf="(editForm.get('quantity').value == 0) &&(editForm.get('quantity').touched || editForm.get('quantity').dirty)" [ngClass]="{stockNotAvailable:(editForm.get('quantity').value == 0) &&(editForm.get('quantity').touched || editForm.get('quantity').dirty)}">Stock unavailable</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="submit" [disabled]="!editForm.valid" class="btn btn-primary" value="Edit Product">
+            </div>
+        </div>
+
+
+    </form>
+</div>

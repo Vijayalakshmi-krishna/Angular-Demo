@@ -1,0 +1,18 @@
+<div class="container">
+    <form [formGroup]="deleteForm" (submit)="deleteData()">
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label for="ProdId">Enter a ProductId:</label>
+                <input type="text" class="form-control" formControlName="productId">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <input type="submit" [disabled]="!deleteForm.valid" class="btn btn-primary" value="Delete Product">
+            </div>
+        </div>
+
+    </form>
+</div>

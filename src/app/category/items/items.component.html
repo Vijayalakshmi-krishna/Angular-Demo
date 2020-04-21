@@ -1,0 +1,17 @@
+
+    <div class="card h-100">
+      <a href="#"><img id="item_img" class="card-img-top" src="assets\Img\{{ItemData.imgsrc}}.jpg" alt="" width="300" height="300"></a>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a routerLink="{{ItemData.productId}}" (click)="setItems()">{{ItemData.productName}}</a>
+        </h4>
+        <h5>&#x20b9;{{ItemData.price}}</h5>
+      
+      </div>
+      <div class="card-footer">       
+          <span  *ngFor="let stars of ratingArraych" class="fa fa-star checked" style="color:orange"></span>       
+          <span  *ngFor="let stars of ratingArrayNch" class="fa fa-star"></span>       
+        
+      </div>
+    </div>
+   

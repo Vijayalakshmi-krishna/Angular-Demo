@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-lg-3">
+    <h1 class="my-6">Shop For Kids</h1>
+    <app-category *ngFor="let category of categoryArray" [categoryData]="category"></app-category>
+
+  </div>
+  <div class="col-lg-9">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let toy of toysArray">
+        <app-items [ItemData]="toy"></app-items>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let dress of textileArray">
+        <app-items [ItemData]="dress"></app-items>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let product of babyProductsArray">
+        <app-items [ItemData]="product"></app-items>
+      </div>
+    </div>
+
+  </div>
